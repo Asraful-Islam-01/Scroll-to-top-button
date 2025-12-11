@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F8F8FD;
+}
+
+h1{
+    color: #667EEA;
+}
+
+h2 {
+    color: #667EEA;
+}
+
+.main-container {
+    align-items: center;
+}
+
+
