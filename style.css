@@ -1,34 +1,132 @@
 /* Reset and base style */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 /* Header Section */
 .header {
-    background:rgba(255, 255, 255, 0.95);
-    padding: 60px 20px;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .header h1 {
-    font-size: 3rem;
-    color: #667eea;
-    margin-bottom: 10px;
+  font-size: 3rem;
+  color: #667eea;
+  margin-bottom: 10px;
 }
 
 .header p {
-    font-size: 1.2rem;
-    color: #666;
+  font-size: 1.2rem;
+  color: #666;
 }
 
 /* Content container */
+.content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Content section with cards */
+.section {
+  background: white;
+  padding: 40px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+}
+
+.section h2 {
+  color: #667eea;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.section p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+/* Footer section */
+.footer {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Scroll to top button styles */
+#scrollToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  /* Button starts hidden */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Show button when scrolled */
+#scrollToTop {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hover effect */
+#scrollToTop:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+/* Active/click effect */
+#scrollToTop {
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 25px;
+  }
+
+  #scrollToTop {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+  }
+}
