@@ -6,7 +6,7 @@ window.addEventListener('scroll', () => {
     //check if user has scrolled more than 300 pixels from top
     if(window.pageYOffset > 300) {
         // Add "show" class to make button visible
-        scrollBtn.classList.add('show');
+        scrollBtn.classList.add("show");
     } else {
         // Remove 'show' class to hide the button
         scrollBtn.classList.remove("show")
@@ -22,11 +22,11 @@ scrollBtn.addEventListener('click', () => {
     });
 });
 
-// Add keyboard support for assessibility
-scrollBtn.addEventListener('keypress', (e) => {
+// Add keyboard support for accessibility
+scrollBtn.addEventListener('keydown', (e) => {
     // Trigger click on Enter or Space key
     if (e.key === "Enter" || e.key === " ") {
-        e.preventDeafault();// Prevent default space scroll
+        e.preventDefault(); // Prevent default space scroll
         scrollBtn.click(); // Trigger the click event
     }
 });

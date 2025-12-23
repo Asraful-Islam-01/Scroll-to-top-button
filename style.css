@@ -96,9 +96,11 @@ body {
 }
 
 /* Show button when scrolled */
-#scrollToTop {
+/* Show button when scrolled (use the JS-added .show class) */
+#scrollToTop.show {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 /* Hover effect */
